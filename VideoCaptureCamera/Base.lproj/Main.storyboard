@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uQz-1O-Q86">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="0Y9-uE-i5X">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="uQz-1O-Q86" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7id-lr-FRP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Sm5-U8-koc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Eus-zO-jRm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0L-kp-QVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="136"/>
+        </scene>
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="VideoCaptureCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +35,107 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uco-Po-YKM">
+                                <rect key="frame" x="41" y="500" width="249" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="CameraRoll">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-rw-xnd" userLabel="Btn_Pict">
+                                <rect key="frame" x="310" y="500" width="249" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="Take Photo!">
+                                    <accessibilityTraits key="traits" none="YES" button="YES"/>
+                                </accessibility>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pict">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NC8-tC-Twa" kind="show" identifier="Camera" id="NJr-EW-HJb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uco-Po-YKM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="AlQ-jG-uKf"/>
+                            <constraint firstItem="NmT-rw-xnd" firstAttribute="leading" secondItem="Uco-Po-YKM" secondAttribute="trailing" constant="20" id="CBf-5W-nQY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uco-Po-YKM" secondAttribute="bottom" constant="70" id="elF-iO-htD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NmT-rw-xnd" secondAttribute="trailing" constant="25" id="k7b-iS-CO4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NmT-rw-xnd" secondAttribute="bottom" constant="70" id="ptk-G3-AwE"/>
+                            <constraint firstItem="NmT-rw-xnd" firstAttribute="width" secondItem="Uco-Po-YKM" secondAttribute="width" id="w8K-dy-OJ6"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0z1-AY-X59"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="3hZ-Nt-wGO">
+            <objects>
+                <viewController id="NC8-tC-Twa" customClass="CameraViewController" customModule="VideoCaptureCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9an-Yd-cdp"/>
+                        <viewControllerLayoutGuide type="bottom" id="3GX-Nj-dSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Orx-99-q7C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45t-Dw-omc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-3B-jfS">
+                                <rect key="frame" x="315" y="500" width="249" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pict">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PictButton:" destination="NC8-tC-Twa" eventType="touchUpInside" id="pYS-I3-E27"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9E-Pr-9Xl">
+                                <rect key="frame" x="36" y="500" width="249" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelButton:" destination="NC8-tC-Twa" eventType="touchUpInside" id="hCb-t9-2cb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3GX-Nj-dSf" firstAttribute="top" secondItem="A9E-Pr-9Xl" secondAttribute="bottom" constant="70" id="2Dk-IE-uwm"/>
+                            <constraint firstItem="RrB-3B-jfS" firstAttribute="width" secondItem="A9E-Pr-9Xl" secondAttribute="width" id="7yk-Jq-893"/>
+                            <constraint firstItem="A9E-Pr-9Xl" firstAttribute="leading" secondItem="Orx-99-q7C" secondAttribute="leadingMargin" constant="20" id="DyF-dm-GNW"/>
+                            <constraint firstItem="45t-Dw-omc" firstAttribute="width" secondItem="Orx-99-q7C" secondAttribute="width" id="JjP-Hk-9HH"/>
+                            <constraint firstAttribute="centerX" secondItem="45t-Dw-omc" secondAttribute="centerX" id="NaJ-Cf-9Wj"/>
+                            <constraint firstItem="3GX-Nj-dSf" firstAttribute="top" secondItem="RrB-3B-jfS" secondAttribute="bottom" constant="70" id="atA-ng-nFC"/>
+                            <constraint firstItem="RrB-3B-jfS" firstAttribute="leading" secondItem="A9E-Pr-9Xl" secondAttribute="trailing" constant="30" id="ate-k5-zOJ"/>
+                            <constraint firstItem="RrB-3B-jfS" firstAttribute="height" secondItem="A9E-Pr-9Xl" secondAttribute="height" id="egh-Lh-mHh"/>
+                            <constraint firstAttribute="centerY" secondItem="45t-Dw-omc" secondAttribute="centerY" id="gOl-1x-vN2"/>
+                            <constraint firstItem="45t-Dw-omc" firstAttribute="height" secondItem="Orx-99-q7C" secondAttribute="height" id="qcY-U4-zR8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RrB-3B-jfS" secondAttribute="trailing" constant="20" id="v43-SH-SQw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rKK-53-WLC"/>
+                    <connections>
+                        <outlet property="PreviewView" destination="45t-Dw-omc" id="tzt-o7-vGc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-on-4v8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="119"/>
         </scene>
     </scenes>
 </document>

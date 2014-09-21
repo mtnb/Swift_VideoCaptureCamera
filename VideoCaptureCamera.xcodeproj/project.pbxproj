@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		A4B6FD8B19CF439C001CA8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FD8A19CF439C001CA8B8 /* AppDelegate.swift */; };
 		A4B6FD8E19CF439C001CA8B8 /* VideoCaptureCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FD8C19CF439C001CA8B8 /* VideoCaptureCamera.xcdatamodeld */; };
-		A4B6FD9019CF439C001CA8B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FD8F19CF439C001CA8B8 /* ViewController.swift */; };
 		A4B6FD9319CF439C001CA8B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B6FD9119CF439C001CA8B8 /* Main.storyboard */; };
 		A4B6FD9519CF439C001CA8B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B6FD9419CF439C001CA8B8 /* Images.xcassets */; };
 		A4B6FD9819CF439C001CA8B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B6FD9619CF439C001CA8B8 /* LaunchScreen.xib */; };
 		A4B6FDA419CF439D001CA8B8 /* VideoCaptureCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FDA319CF439D001CA8B8 /* VideoCaptureCameraTests.swift */; };
+		A4B6FDAF19CF441C001CA8B8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FDAD19CF441C001CA8B8 /* CameraViewController.swift */; };
+		A4B6FDB019CF441C001CA8B8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6FDAE19CF441C001CA8B8 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		A4B6FD8919CF439C001CA8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B6FD8A19CF439C001CA8B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B6FD8D19CF439C001CA8B8 /* VideoCaptureCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoCaptureCamera.xcdatamodel; sourceTree = "<group>"; };
-		A4B6FD8F19CF439C001CA8B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4B6FD9219CF439C001CA8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4B6FD9419CF439C001CA8B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4B6FD9719CF439C001CA8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A4B6FD9D19CF439D001CA8B8 /* VideoCaptureCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoCaptureCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B6FDA219CF439D001CA8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B6FDA319CF439D001CA8B8 /* VideoCaptureCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureCameraTests.swift; sourceTree = "<group>"; };
+		A4B6FDAD19CF441C001CA8B8 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A4B6FDAE19CF441C001CA8B8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,9 @@
 		A4B6FD8719CF439C001CA8B8 /* VideoCaptureCamera */ = {
 			isa = PBXGroup;
 			children = (
+				A4B6FDAD19CF441C001CA8B8 /* CameraViewController.swift */,
+				A4B6FDAE19CF441C001CA8B8 /* RootViewController.swift */,
 				A4B6FD8A19CF439C001CA8B8 /* AppDelegate.swift */,
-				A4B6FD8F19CF439C001CA8B8 /* ViewController.swift */,
 				A4B6FD9119CF439C001CA8B8 /* Main.storyboard */,
 				A4B6FD9419CF439C001CA8B8 /* Images.xcassets */,
 				A4B6FD9619CF439C001CA8B8 /* LaunchScreen.xib */,
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					A4B6FD8419CF439C001CA8B8 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 68M9DH7Y6U;
 					};
 					A4B6FD9C19CF439D001CA8B8 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -215,9 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B6FD9019CF439C001CA8B8 /* ViewController.swift in Sources */,
 				A4B6FD8B19CF439C001CA8B8 /* AppDelegate.swift in Sources */,
 				A4B6FD8E19CF439C001CA8B8 /* VideoCaptureCamera.xcdatamodeld in Sources */,
+				A4B6FDB019CF441C001CA8B8 /* RootViewController.swift in Sources */,
+				A4B6FDAF19CF441C001CA8B8 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +347,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VideoCaptureCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -352,7 +359,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VideoCaptureCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
